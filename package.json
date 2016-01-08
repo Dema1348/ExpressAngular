@@ -1,0 +1,15 @@
+{
+  "name": "angular-rest",
+  "version": "1.0.0",
+  "description": "crear una api y consumir sus datos con angular",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edson Pérez",
+  "license": "ISC",
+  "dependencies": {
+        "express": "~3.x",
+        "mongoose": "latest"
+    }
+}

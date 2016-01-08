@@ -1,0 +1,44 @@
+<html ng-app="TareasApp">
+<head>
+	<title>Angular Rest</title>
+	<script src="js/jquery/dist/jquery.js"></script>
+	<link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap-theme.css">
+	<script src="js/bootstrap/dist/js/bootstrap.js"></script>
+	
+</head>
+<body ng-controller="TareasCtrl as vm">
+	<div class="container">
+		<div class="jumbotron text-center">
+		
+		
+			 <h1>Tareas <span class="label label-info">{{vm.cantidad}}</span></h1>
+	
+		
+		</div>
+		<div  class="row" style="padding:10px;">
+            <div class="col-sm-4 col-sm-offset-4 text-center ">
+                <div ng-repeat="tarea in vm.tareas">
+                	 <h1><span class="label label-info">{{tarea.text}}</span> <button class="btn btn-danger " ng-click="vm.eliminar(tarea._id,$index)">Eliminar</button></h1>
+
+                 </div>
+             </div>
+         </div>
+
+         <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg text-center" placeholder="Inserta una tarea nueva" ng-model="vm.text">
+                    </div>
+                    <button class="btn btn-primary btn-lg" ng-click="vm.crear()">Añadir</button>
+                </form>
+            </div>
+        </div>
+
+	</div>
+	
+	<script src="js/angular/angular.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
